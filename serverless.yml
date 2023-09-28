@@ -1,0 +1,40 @@
+org: khopkarrohan
+app: animerecs
+service: animerecs
+frameworkVersion: '3'
+#plugins:
+#  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+	
+package:
+  patterns:
+    - '!src/**'
+    - src/function/handler.py
+    - '!node_modules/**'
+
+provider:
+  name: aws
+  iam:
+    role: arn:aws:iam::480916561661:role/Lambda_s3
+  runtime: python3.9
+  memorySize: 2000
+  timeout: 15 # optional, in seconds, default is 6
+  architecture: x86_64
+  ecr:
+    images:
+      animerecs:
+        path: ./
+
+functions:
+  numpy:
+    #handler: handler.main
+    image:
+      name: animerecs
+    events:
+      - http:
+          path: /main
+          method: post
