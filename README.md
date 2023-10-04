@@ -5,8 +5,8 @@
 __What is NCF?__
 * Collaborative filtering, a very commonly used method in recommendation systems, essentially decomposes a matrix of users and their ratings or interactions with items into the product of two matrices. By doing so, one can obtain embeddings of items and users with respect to some latent feature dimension. This allows for an understanding of users and items in the context of this latent dimension, and extrapolation of similarity for items or users that have not yet interacted.
   ![image](https://github.com/ubitquitin/mal_reccos/assets/14205051/55ed1dc2-d5ef-4d3c-ac0d-aafb6f7e7d94)
-_Chupakhin, Andrei & Kolosov, Alexey & Smeliansky, Ruslan & Antonenko, Vitaly & Ishelev, G.. (2020). New approach to MPI program execution time prediction. _
-* Item user interactions in this latent space can be more complex than just the dot product operation used to concatenate the embeddings. *Neural collaborative filtering* adds a feedforward neural network on top of the embeddings to represent a more complex, nonlinear function.
+_Chupakhin, Andrei & Kolosov, Alexey & Smeliansky, Ruslan & Antonenko, Vitaly & Ishelev, G.. (2020). New approach to MPI program execution time prediction.
+_* Item user interactions in this latent space can be more complex than just the dot product operation used to concatenate the embeddings. *Neural collaborative filtering* adds a feedforward neural network on top of the embeddings to represent a more complex, nonlinear function.
 * The following neural collaborative filtering model was implemented, following guidance of the original paper:
 ![image](https://github.com/ubitquitin/mal_reccos/assets/14205051/10c01e06-0105-4c24-8c6f-91abf32d44e3)
 _  arXiv:1708.05031_
